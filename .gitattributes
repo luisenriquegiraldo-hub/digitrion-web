@@ -1,0 +1,7 @@
+# Normalizar todos los archivos de texto a LF (importante para el contenedor Linux/nginx)
+* text=auto eol=lf
+
+# Archivos binarios (no tocar)
+*.png binary
+*.jpg binary
+*.ico binary

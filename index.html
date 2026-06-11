@@ -1,0 +1,645 @@
+<!DOCTYPE html>
+<html lang="es" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- SEO primario -->
+<title>Digitrion | Automatización, Desarrollo Web e IA para tu negocio</title>
+<meta name="description" content="Digitrion es tu agencia de tecnología: automatización de procesos, agentes de IA y chatbots, desarrollo web e integraciones para llevar cualquier negocio al siguiente nivel." />
+<meta name="keywords" content="agencia de automatización, desarrollo web Colombia, agentes de IA, chatbots empresas, integraciones API, automatización de procesos, transformación digital, agencia tecnología LATAM" />
+<meta name="author" content="Digitrion" />
+<meta name="robots" content="index, follow" />
+<meta name="theme-color" content="#0ab8e8" />
+<link rel="canonical" href="https://digitrion.com/" />
+
+<!-- Hreflang -->
+<link rel="alternate" hreflang="es" href="https://digitrion.com/" />
+<link rel="alternate" hreflang="es-CO" href="https://digitrion.com/" />
+<link rel="alternate" hreflang="x-default" href="https://digitrion.com/" />
+
+<!-- Open Graph (Facebook / Meta / WhatsApp) -->
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://digitrion.com/" />
+<meta property="og:site_name" content="Digitrion" />
+<meta property="og:title" content="Digitrion | Automatización, Desarrollo Web e IA para tu negocio" />
+<meta property="og:description" content="Agencia de tecnología: automatización de procesos, desarrollo web, agentes de IA e integraciones para llevar tu negocio al siguiente nivel." />
+<meta property="og:image" content="https://digitrion.com/og-image.jpg" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Digitrion — Automatización, desarrollo web e IA para empresas" />
+<meta property="og:locale" content="es_CO" />
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Digitrion | Automatización, Desarrollo Web e IA" />
+<meta name="twitter:description" content="Agencia de tecnología: automatización, desarrollo web, agentes de IA e integraciones para tu negocio." />
+<meta name="twitter:image" content="https://digitrion.com/og-image.jpg" />
+
+<!-- Seguridad -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff" />
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+<meta name="referrer" content="strict-origin-when-cross-origin" />
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()" />
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; script-src 'self' 'unsafe-inline'; img-src 'self' data: https:; connect-src 'self'; frame-ancestors 'self'; base-uri 'self'; form-action 'self';" />
+
+<!-- Fuentes (performance: preconnect + display=swap) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Questrial&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0a0d10;
+    --bg-2:#0e1217;
+    --surface:#141a20;
+    --surface-2:#1a222a;
+    --border:rgba(255,255,255,.08);
+    --border-strong:rgba(255,255,255,.14);
+    --text:#eaf0ee;
+    --muted:#93a0a4;
+    --accent:#0ab8e8;
+    --accent-2:#19c9c0;
+    --accent-3:#0891b8;
+    --accent-soft:rgba(10,184,232,.10);
+    --radius:18px;
+    --maxw:1180px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Manrope',sans-serif;
+    line-height:1.6;
+    overflow-x:hidden;
+    -webkit-font-smoothing:antialiased;
+  }
+  /* background texture */
+  body::before{
+    content:"";position:fixed;inset:0;z-index:0;pointer-events:none;
+    background-image:radial-gradient(rgba(255,255,255,.035) 1px,transparent 1px);
+    background-size:26px 26px;
+    mask-image:radial-gradient(ellipse 80% 60% at 50% 0%,#000 30%,transparent 75%);
+  }
+  body::after{
+    content:"";position:fixed;top:-20%;left:50%;transform:translateX(-50%);
+    width:900px;height:600px;z-index:0;pointer-events:none;
+    background:radial-gradient(closest-side,rgba(10,184,232,.16),transparent 70%);
+    filter:blur(20px);
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;position:relative;z-index:2}
+  a{color:inherit;text-decoration:none}
+  h1,h2,h3{font-family:'Questrial',sans-serif;font-weight:400;line-height:1.1;letter-spacing:-.01em}
+
+  /* NAV */
+  header{position:sticky;top:0;z-index:50;backdrop-filter:blur(12px);
+    background:rgba(10,13,16,.7);border-bottom:1px solid var(--border)}
+  nav{display:flex;align-items:center;justify-content:space-between;height:72px}
+  .logo{display:flex;align-items:center;gap:10px;font-family:'Questrial',sans-serif;font-weight:400;font-size:22px;letter-spacing:-.02em}
+  .logo .dot{width:11px;height:11px;border-radius:3px;background:var(--accent);box-shadow:0 0 16px var(--accent)}
+  /* Brand lockup: logo + tagline al mismo ancho (logo = 192px en pantalla) */
+  .brand{display:inline-flex;flex-direction:column;gap:5px;line-height:1}
+  .brand img{width:192px;height:auto;display:block}
+  /* Tagline bajo la línea de la cabecera: palabras juntas, alineadas con el logo */
+  .topbar-tagline{
+    font-family:'Questrial',sans-serif;font-weight:400;
+    font-size:16px;letter-spacing:.1em;text-transform:uppercase;line-height:1;
+    padding:14px 0;color:var(--accent);
+  }
+  .nav-links{display:flex;gap:34px;align-items:center}
+  .nav-links a{color:var(--muted);font-size:15px;font-weight:500;transition:color .2s}
+  .nav-links a:hover{color:var(--text)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:600;font-size:15px;
+    padding:11px 20px;border-radius:999px;cursor:pointer;transition:.25s;white-space:nowrap}
+  .btn-primary{background:linear-gradient(135deg,#1c8198,#1f8c83);color:#eaf0ee;border:none;font-weight:700}
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(10,184,232,.12)}
+  .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border-strong)}
+  .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+  .nav-cta{display:flex;gap:12px;align-items:center}
+  /* Botón "Iniciar sesión" del nav: más sutil */
+  .nav-cta .btn-ghost{color:var(--muted);border-color:var(--border)}
+  .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
+  .burger span{width:24px;height:2px;background:var(--text);border-radius:2px}
+
+  /* HERO */
+  .hero{padding:90px 0 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:60px;align-items:center}
+  .badge{display:inline-flex;align-items:center;gap:8px;padding:7px 14px;border-radius:999px;
+    background:var(--accent-soft);border:1px solid rgba(10,184,232,.25);color:var(--accent);
+    font-size:13px;font-weight:600;margin-bottom:26px}
+  .badge .pulse{width:7px;height:7px;border-radius:50%;background:var(--accent);
+    box-shadow:0 0 0 0 rgba(10,184,232,.6);animation:pulse 2s infinite}
+  @keyframes pulse{0%{box-shadow:0 0 0 0 rgba(10,184,232,.5)}70%{box-shadow:0 0 0 9px rgba(10,184,232,0)}100%{box-shadow:0 0 0 0 rgba(10,184,232,0)}}
+  .hero h1{font-size:clamp(28px,3.7vw,44px);margin-bottom:22px;font-weight:400}
+  .hero h1 .hl{background:linear-gradient(120deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;color:var(--accent)}
+  .hero p.lead{font-size:19px;color:var(--muted);max-width:520px;margin-bottom:34px}
+  .hero-cta{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:34px}
+  .hero-cta .btn{padding:14px 26px;font-size:16px}
+  .trust-row{display:flex;gap:28px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+  .trust-row .ti{display:flex;align-items:center;gap:8px}
+  .trust-row svg{width:16px;height:16px;stroke:var(--accent)}
+
+  /* chat mockup */
+  .mock{position:relative}
+  .phone{background:var(--surface);border:1px solid var(--border-strong);border-radius:28px;
+    padding:18px 16px 22px;box-shadow:0 30px 70px rgba(0,0,0,.5);max-width:340px;margin:0 auto;position:relative}
+  .phone::before{content:"";position:absolute;top:12px;left:50%;transform:translateX(-50%);width:90px;height:5px;border-radius:99px;background:rgba(255,255,255,.12)}
+  .chat-head{display:flex;align-items:center;gap:11px;padding:14px 6px 16px;border-bottom:1px solid var(--border);margin-bottom:16px}
+  .chat-av{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,var(--accent),var(--accent-2));display:flex;align-items:center;justify-content:center;font-weight:400;color:#0a0d10;font-family:'Questrial'}
+  .chat-head .nm{font-weight:700;font-size:15px}
+  .chat-head .st{font-size:12px;color:var(--accent)}
+  .bubbles{display:flex;flex-direction:column;gap:10px;min-height:300px}
+  .bub{max-width:80%;padding:10px 14px;border-radius:16px;font-size:14px;opacity:0;transform:translateY(10px);animation:rise .5s forwards}
+  .bub.in{align-self:flex-start;background:var(--surface-2);border:1px solid var(--border);border-bottom-left-radius:5px}
+  .bub.out{align-self:flex-end;background:rgba(10,184,232,.10);color:var(--text);border:1px solid rgba(10,184,232,.18);font-weight:500;border-bottom-right-radius:5px}
+  .bub:nth-child(1){animation-delay:.3s}
+  .bub:nth-child(2){animation-delay:1.0s}
+  .bub:nth-child(3){animation-delay:1.7s}
+  .bub:nth-child(4){animation-delay:2.5s}
+  .bub:nth-child(5){animation-delay:3.3s}
+  @keyframes rise{to{opacity:1;transform:translateY(0)}}
+  .float-tag{position:absolute;background:var(--surface);border:1px solid var(--border-strong);border-radius:12px;padding:10px 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+  .float-tag .ic{color:var(--accent)}
+  .ft-1{top:6%;left:-6%;animation:bob 4s ease-in-out infinite}
+  .ft-2{bottom:10%;right:-8%;animation:bob 4s ease-in-out infinite .8s}
+  @keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+
+  /* SECTION shells */
+  section{position:relative;z-index:2}
+  .section-pad{padding:80px 0}
+  .eyebrow{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px}
+  .section-title{font-size:clamp(28px,3.6vw,42px);margin-bottom:16px}
+  .section-sub{color:var(--muted);font-size:18px;max-width:620px}
+  .center{text-align:center;margin:0 auto}
+
+  /* logos / para quién */
+  .who{border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:34px 0;background:var(--bg-2)}
+  .who-row{display:flex;align-items:center;justify-content:center;gap:46px;flex-wrap:wrap;color:var(--muted);font-weight:600}
+  .who-row .lbl{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);opacity:.7}
+  .who-row .it{display:flex;align-items:center;gap:9px;font-size:17px;color:var(--text)}
+  .who-row .it svg{width:20px;height:20px;stroke:var(--accent)}
+
+  /* services */
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:46px}
+  .card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:28px;transition:.3s;position:relative;overflow:hidden}
+  .card:hover{border-color:var(--border-strong);transform:translateY(-4px);background:var(--surface-2)}
+  .card .ic-wrap{width:48px;height:48px;border-radius:13px;background:var(--accent-soft);border:1px solid rgba(10,184,232,.25);display:flex;align-items:center;justify-content:center;margin-bottom:18px}
+  .card .ic-wrap svg{width:24px;height:24px;stroke:var(--accent);fill:none;stroke-width:1.8}
+  .card h3{font-size:20px;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:15px}
+
+  /* steps */
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:46px}
+  .step{position:relative;padding-top:14px}
+  .step .num{font-family:'Questrial';font-size:56px;font-weight:400;color:transparent;-webkit-text-stroke:1.5px var(--accent);line-height:1;margin-bottom:12px;opacity:.9}
+  .step h3{font-size:19px;margin-bottom:8px}
+  .step p{color:var(--muted);font-size:15px}
+
+  /* benefits split */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}
+  .blist{list-style:none;display:flex;flex-direction:column;gap:18px;margin-top:26px}
+  .blist li{display:flex;gap:14px;align-items:flex-start}
+  .blist .chk{flex:none;width:26px;height:26px;border-radius:8px;background:var(--accent-soft);border:1px solid rgba(10,184,232,.3);display:flex;align-items:center;justify-content:center}
+  .blist .chk svg{width:14px;height:14px;stroke:var(--accent);stroke-width:2.5}
+  .blist b{display:block;font-size:16px;margin-bottom:2px}
+  .blist span{color:var(--muted);font-size:14px}
+  .stat-card{background:linear-gradient(160deg,var(--surface),var(--bg-2));border:1px solid var(--border);border-radius:24px;padding:34px}
+  .stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .stat .big{font-family:'Questrial';font-size:44px;font-weight:400;color:var(--accent);line-height:1}
+  .stat .lbl{color:var(--muted);font-size:14px;margin-top:6px}
+
+  /* CTA */
+  .cta-band{background:linear-gradient(135deg,rgba(10,184,232,.12),rgba(10,184,232,.06));border:1px solid rgba(10,184,232,.25);border-radius:28px;padding:56px 40px;text-align:center;position:relative;overflow:hidden}
+  .cta-band h2{font-size:clamp(28px,3.6vw,40px);margin-bottom:14px;color:var(--text)}
+  .cta-band p{color:var(--muted);font-size:18px;max-width:520px;margin:0 auto 28px}
+
+  /* footer */
+  footer{border-top:1px solid var(--border);background:var(--bg-2);padding:60px 0 30px;position:relative;z-index:2;margin-top:40px}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:40px}
+  .foot-grid h4{font-size:14px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:16px}
+  .foot-grid a{display:block;color:var(--muted);font-size:15px;margin-bottom:10px;transition:.2s}
+  .foot-grid a:hover{color:var(--accent)}
+  .legal-block{color:var(--muted);font-size:14px;line-height:1.8;margin-top:14px}
+  .legal-block strong{color:var(--text)}
+  .foot-bottom{border-top:1px solid var(--border);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:14px;color:var(--muted);font-size:13px}
+  .foot-bottom a{color:var(--muted)}
+  .foot-bottom a:hover{color:var(--accent)}
+
+  /* reveal */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.show{opacity:1;transform:none}
+
+  /* FAQ */
+  .faq{padding:80px 0}
+  .faq-list{margin-top:46px;display:flex;flex-direction:column;gap:0}
+  .faq-item{border-bottom:1px solid var(--border)}
+  .faq-item:first-child{border-top:1px solid var(--border)}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 4px;cursor:pointer;font-weight:600;font-size:17px;list-style:none;user-select:none}
+  .faq-q::-webkit-details-marker{display:none}
+  .faq-q svg{flex-shrink:0;width:20px;height:20px;stroke:var(--accent);transition:transform .3s}
+  details[open] .faq-q svg{transform:rotate(45deg)}
+  .faq-a{padding:0 4px 20px;color:var(--muted);font-size:16px;line-height:1.7;max-width:680px}
+
+  /* responsive — tablet */
+  @media(max-width:900px){
+    .hero{grid-template-columns:1fr;gap:40px;padding:60px 0 40px}
+    .mock{order:2}
+    .grid-3{grid-template-columns:1fr 1fr}
+    .steps{grid-template-columns:1fr}
+    .split{grid-template-columns:1fr;gap:34px}
+    .foot-grid{grid-template-columns:1fr 1fr}
+    .nav-links{display:none;flex-direction:column;gap:0;position:absolute;top:72px;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--border);z-index:100;padding:8px 0}
+    .nav-links.open{display:flex}
+    .nav-links a{padding:14px 24px;font-size:16px;border-bottom:1px solid var(--border)}
+    .nav-cta .btn-ghost{display:none}
+    .burger{display:flex}
+    .who-row{gap:20px}
+    .hero h1{font-size:clamp(30px,5vw,46px)}
+    .cta-band{padding:44px 28px}
+  }
+  /* responsive — mobile medio */
+  @media(max-width:640px){
+    .grid-3{grid-template-columns:1fr}
+    .stat-grid{grid-template-columns:1fr 1fr}
+    .section-pad{padding:56px 0}
+    .faq{padding:56px 0}
+    .hero{padding:44px 0 32px}
+    .steps{grid-template-columns:1fr}
+  }
+  /* responsive — móvil pequeño */
+  @media(max-width:480px){
+    .foot-grid{grid-template-columns:1fr}
+    .stat-grid{grid-template-columns:1fr}
+    .hero-cta{flex-direction:column}
+    .hero-cta .btn{width:100%;justify-content:center}
+    .trust-row{flex-direction:column;gap:8px}
+    .phone{max-width:100%}
+    .cta-band{padding:36px 20px}
+    .hero h1{font-size:28px}
+    .hero p.lead{font-size:16px}
+    .section-title{font-size:24px}
+    .who-row{flex-direction:column;gap:12px;align-items:flex-start;padding:22px 24px}
+    .card{padding:20px}
+    .faq-q{font-size:15px}
+    .faq-a{font-size:15px}
+    /* En móvil pequeño: cabecera limpia (solo logo + hamburguesa) */
+    .nav-cta .btn-primary{display:none}
+    /* Touch targets mínimo 44px */
+    .btn{min-height:44px}
+    .nav-links a{min-height:44px;display:flex;align-items:center}
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#" class="brand" aria-label="Digitrion - Inicio">
+        <img src="logo.png" alt="Digitrion" />
+      </a>
+      <div class="nav-links">
+        <a href="#servicios">Servicios</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#porque">Por qué Digitrion</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <div class="nav-cta">
+        <a href="#contacto" class="btn btn-ghost">Iniciar sesión</a>
+        <a href="https://wa.me/573116305946?text=Hola%20Digitrion,%20quiero%20una%20demo" class="btn btn-primary" target="_blank" rel="noopener">Agenda una demo</a>
+        <div class="burger" id="burger"><span></span><span></span><span></span></div>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<div class="wrap">
+  <p class="topbar-tagline">Automatizamos. Desarrollamos. Innovamos.</p>
+</div>
+
+<main>
+  <!-- HERO -->
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <h1>Lleva tu negocio al <span class="hl">siguiente nivel.</span></h1>
+      <p class="lead">Digitrion es tu agencia de tecnología. Automatizamos procesos, construimos software a medida e integramos inteligencia artificial para que tu negocio crezca y opere sin fricciones.</p>
+      <div class="hero-cta">
+        <a href="https://wa.me/573116305946?text=Hola%20Digitrion,%20quiero%20una%20demo" class="btn btn-primary" target="_blank" rel="noopener">
+          Agenda una demo gratis
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+        </a>
+        <a href="#como" class="btn btn-ghost">Ver cómo funciona</a>
+      </div>
+      <div class="trust-row">
+        <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Soluciones a medida</div>
+        <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Para cualquier sector</div>
+        <div class="ti"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg> Soporte en español</div>
+      </div>
+    </div>
+
+    <div class="mock">
+      <div class="float-tag ft-1"><span class="ic">●</span> Tarea automatizada</div>
+      <div class="float-tag ft-2"><span class="ic">⚡</span> Respuesta en 1 seg</div>
+      <div class="phone">
+        <div class="chat-head">
+          <div class="chat-av">D</div>
+          <div>
+            <div class="nm">Asistente Digitrion</div>
+            <div class="st">en línea</div>
+          </div>
+        </div>
+        <div class="bubbles">
+          <div class="bub in">¡Hola! 👋 Soy el asistente de IA de tu negocio. ¿En qué te ayudo?</div>
+          <div class="bub out">¿Cuántos pedidos llegaron hoy?</div>
+          <div class="bub in">Hoy van 47 pedidos 📦 — 12% más que ayer. Te genero el reporte.</div>
+          <div class="bub out">Sí, envíalo al equipo</div>
+          <div class="bub in">¡Listo! ✅ Reporte enviado y registrado en tu sistema. 🙌</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARA QUIÉN -->
+  <section class="who">
+    <div class="wrap who-row">
+      <span class="lbl">Para todo tipo de negocio</span>
+      <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg> Pymes</span>
+      <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg> Comercios</span>
+      <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 010 20"/></svg> Profesionales</span>
+      <span class="it"><svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4"/></svg> Empresas</span>
+    </div>
+  </section>
+
+  <!-- SERVICIOS -->
+  <section id="servicios" class="wrap section-pad">
+    <div class="reveal">
+      <p class="eyebrow">Servicios</p>
+      <h2 class="section-title">Tecnología que impulsa tu negocio</h2>
+      <p class="section-sub">Combinamos automatización, desarrollo e inteligencia artificial para resolver los retos reales de tu operación.</p>
+    </div>
+    <div class="grid-3">
+      <div class="card reveal">
+        <div class="ic-wrap"><svg viewBox="0 0 24 24"><path d="M12 2l2 4 4 .5-3 3 .8 4.3L12 12l-3.8 1.8.8-4.3-3-3 4-.5z"/><circle cx="12" cy="18" r="3"/></svg></div>
+        <h3>Automatización de procesos</h3>
+        <p>Eliminamos tareas manuales y repetitivas conectando tus herramientas en flujos automáticos que trabajan por ti, 24/7.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic-wrap"><svg viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="12" rx="2"/><circle cx="9" cy="11" r="1"/><circle cx="15" cy="11" r="1"/><path d="M9 17v3M15 17v3M7 21h10M12 2v3"/></svg></div>
+        <h3>Agentes de IA y chatbots</h3>
+        <p>Asistentes inteligentes que atienden a tus clientes, responden consultas y ejecutan acciones con lenguaje natural.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic-wrap"><svg viewBox="0 0 24 24"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 9h20M8 14l-2 2 2 2M14 14l2 2-2 2"/></svg></div>
+        <h3>Desarrollo web</h3>
+        <p>Sitios, landing pages y aplicaciones web rápidas, seguras y a la medida de tu negocio, optimizadas para resultados.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic-wrap"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 007.5.5l3-3a5 5 0 00-7-7l-1.7 1.7"/><path d="M14 11a5 5 0 00-7.5-.5l-3 3a5 5 0 007 7l1.7-1.7"/></svg></div>
+        <h3>Integraciones y API</h3>
+        <p>Conectamos tus sistemas, plataformas y datos para que todo tu stack funcione como una sola pieza, sin islas de información.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic-wrap"><svg viewBox="0 0 24 24"><path d="M3 17l6-6 4 4 7-7"/><path d="M17 7h4v4"/></svg></div>
+        <h3>Optimización y crecimiento</h3>
+        <p>Analizamos, medimos y mejoramos tus procesos digitales para que tu negocio escale de forma sostenible.</p>
+      </div>
+      <div class="card reveal">
+        <div class="ic-wrap"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg></div>
+        <h3>Automatización por WhatsApp</h3>
+        <p>Chatbots, agendamiento y notificaciones por WhatsApp con la API oficial de Meta, integrados a tu operación.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CÓMO FUNCIONA -->
+  <section id="como" class="wrap section-pad">
+    <div class="reveal">
+      <p class="eyebrow">Cómo funciona</p>
+      <h2 class="section-title">En marcha en 3 pasos</h2>
+      <p class="section-sub">Nos encargamos de la parte técnica. Tú solo nos cuentas cómo trabaja tu negocio.</p>
+    </div>
+    <div class="steps">
+      <div class="step reveal">
+        <div class="num">01</div>
+        <h3>Analizamos tu negocio</h3>
+        <p>Entendemos tus procesos, retos y objetivos para diseñar la solución correcta — automatización, software o IA.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">02</div>
+        <h3>Construimos la solución</h3>
+        <p>Desarrollamos e implementamos a medida, integrando tus herramientas actuales sin interrumpir tu operación.</p>
+      </div>
+      <div class="step reveal">
+        <div class="num">03</div>
+        <h3>Creces sin fricciones</h3>
+        <p>Tu negocio opera de forma más eficiente, escalable y automatizada. Seguimos a tu lado optimizando.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- POR QUÉ -->
+  <section id="porque" class="wrap section-pad">
+    <div class="split">
+      <div class="reveal">
+        <p class="eyebrow">Por qué Digitrion</p>
+        <h2 class="section-title">Tecnología que trabaja por ti</h2>
+        <p class="section-sub">Combinamos experiencia técnica e inteligencia artificial para resolver problemas reales y generar resultados medibles.</p>
+        <ul class="blist">
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Soluciones a tu medida</b><span>No plantillas genéricas: construimos según las necesidades reales de tu negocio.</span></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Tus datos, seguros y privados</b><span>Aplicamos buenas prácticas de seguridad en cada proyecto que desarrollamos.</span></div></li>
+          <li><span class="chk"><svg viewBox="0 0 24 24" fill="none"><path d="M20 6L9 17l-5-5"/></svg></span><div><b>Hecho para Latinoamérica</b><span>Acompañamiento cercano y soporte en español, pensado para tu mercado.</span></div></li>
+        </ul>
+      </div>
+      <div class="stat-card reveal">
+        <div class="stat-grid">
+          <div class="stat"><div class="big">24/7</div><div class="lbl">Procesos sin descanso</div></div>
+          <div class="stat"><div class="big">IA</div><div class="lbl">En el centro de todo</div></div>
+          <div class="stat"><div class="big">100%</div><div class="lbl">Soluciones a medida</div></div>
+          <div class="stat"><div class="big">∞</div><div class="lbl">Integraciones posibles</div></div>
+        </div>
+        <p style="color:var(--muted);font-size:12px;margin-top:22px">Cada proyecto se adapta a los objetivos específicos de tu negocio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="wrap faq" id="faq">
+    <div class="reveal">
+      <p class="eyebrow">Preguntas frecuentes</p>
+      <h2 class="section-title">Todo lo que necesitas saber</h2>
+      <p class="section-sub">Si tienes más dudas, escríbenos por WhatsApp y te respondemos en el acto.</p>
+    </div>
+    <div class="faq-list reveal">
+      <details class="faq-item">
+        <summary class="faq-q">¿Qué tipo de negocios pueden trabajar con Digitrion?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq-a">Cualquiera. Trabajamos con pymes, comercios, profesionales independientes y empresas de todos los sectores. Adaptamos cada solución —automatización, software o IA— a tu operación específica.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">¿En cuánto tiempo está lista una solución?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq-a">Depende del alcance. Una automatización o landing page puede estar lista en pocos días; un desarrollo a medida o una integración compleja toma más. En la primera conversación te damos un estimado claro.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">¿Necesito conocimientos técnicos para trabajar con ustedes?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq-a">No. Nos encargamos de toda la parte técnica. Tú solo nos cuentas qué necesitas y cómo funciona tu negocio; nosotros diseñamos, construimos y mantenemos la solución.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">¿Se integra con las herramientas que ya uso?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq-a">Sí. Conectamos tus sistemas actuales —CRM, hojas de cálculo, pasarelas de pago, WhatsApp, bases de datos y más— mediante integraciones y API para que todo funcione como una sola pieza.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">¿Trabajan con negocios fuera de Colombia?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq-a">Sí. Trabajamos con clientes en toda Latinoamérica de forma remota, con soporte y comunicación en español.</p>
+      </details>
+      <details class="faq-item">
+        <summary class="faq-q">¿Los datos de mi negocio están seguros?<svg viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></summary>
+        <p class="faq-a">Sí. Aplicamos buenas prácticas de seguridad y aislamiento de datos, y cumplimos con la Ley 1581 de 2012 de Colombia. Puedes leer nuestra <a href="privacidad.html" style="color:var(--accent)">Política de Privacidad</a> completa.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section id="contacto" class="wrap section-pad">
+    <div class="cta-band reveal">
+      <h2>¿Listo para llevar tu negocio al siguiente nivel?</h2>
+      <p>Escríbenos por WhatsApp y conversemos sobre cómo la tecnología puede impulsar tu negocio.</p>
+      <a href="https://wa.me/573116305946?text=Hola%20Digitrion,%20quiero%20una%20demo" class="btn btn-primary" style="padding:15px 30px;font-size:17px" target="_blank" rel="noopener">
+        Hablar con Digitrion
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER con datos legales requeridos por Meta -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#" class="logo" aria-label="Digitrion">
+          <img src="logo.png" alt="Digitrion" height="32" />
+        </a>
+        <div class="legal-block">
+          <strong>DIGITRION</strong><br>
+          NIT: 16.453.917-0<br>
+          Calle 70 2AN 151, Cali, Valle del Cauca, Colombia<br>
+          Tel: +57 311 630 5946<br>
+          Correo: contacto@digitrion.com
+        </div>
+      </div>
+      <div>
+        <h4>Producto</h4>
+        <a href="#servicios">Servicios</a>
+        <a href="#como">Cómo funciona</a>
+        <a href="#porque">Por qué Digitrion</a>
+        <a href="https://wa.me/573116305946" target="_blank" rel="noopener">Agenda una demo</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="privacidad.html">Política de Privacidad</a>
+        <a href="terminos.html">Términos de Servicio</a>
+        <a href="mailto:contacto@digitrion.com">contacto@digitrion.com</a>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> DIGITRION · NIT 16.453.917-0. Todos los derechos reservados.</span>
+      <span><a href="privacidad.html">Privacidad</a> · <a href="terminos.html">Términos</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://digitrion.com/#website",
+      "url": "https://digitrion.com/",
+      "name": "Digitrion",
+      "description": "Agencia de tecnología: automatización, desarrollo web e IA para empresas",
+      "inLanguage": "es-CO"
+    },
+    {
+      "@type": ["LocalBusiness", "ProfessionalService"],
+      "@id": "https://digitrion.com/#organization",
+      "name": "Digitrion",
+      "legalName": "DIGITRION",
+      "url": "https://digitrion.com/",
+      "email": "contacto@digitrion.com",
+      "telephone": "+573116305946",
+      "description": "Agencia de tecnología que ofrece automatización de procesos, desarrollo web, agentes de IA e integraciones para empresas en Latinoamérica.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Calle 70 2AN 151",
+        "addressLocality": "Cali",
+        "addressRegion": "Valle del Cauca",
+        "addressCountry": "CO"
+      },
+      "areaServed": {"@type": "GeoCircle", "geoMidpoint": {"@type": "GeoCoordinates", "latitude": 3.4516, "longitude": -76.5320}, "geoRadius": "5000000"},
+      "priceRange": "$$",
+      "openingHoursSpecification": {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"], "opens": "08:00", "closes": "18:00"},
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Servicios de Digitrion",
+        "itemListElement": [
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Automatización de procesos", "description": "Eliminación de tareas manuales conectando herramientas en flujos automáticos"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Agentes de IA y chatbots", "description": "Asistentes inteligentes que atienden clientes y ejecutan acciones con lenguaje natural"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Desarrollo web", "description": "Sitios, landing pages y aplicaciones web a medida, rápidas y seguras"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Integraciones y API", "description": "Conexión de sistemas, plataformas y datos en un solo stack"}},
+          {"@type": "Offer", "itemOffered": {"@type": "Service", "name": "Optimización y crecimiento", "description": "Análisis y mejora de procesos digitales para escalar el negocio"}}
+        ]
+      }
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {"@type": "Question", "name": "¿Qué tipo de negocios pueden trabajar con Digitrion?", "acceptedAnswer": {"@type": "Answer", "text": "Cualquiera. Trabajamos con pymes, comercios, profesionales independientes y empresas de todos los sectores, adaptando cada solución a su operación."}},
+        {"@type": "Question", "name": "¿En cuánto tiempo está lista una solución?", "acceptedAnswer": {"@type": "Answer", "text": "Depende del alcance. Una automatización o landing page puede estar lista en pocos días; un desarrollo a medida toma más. Damos un estimado claro en la primera conversación."}},
+        {"@type": "Question", "name": "¿Necesito conocimientos técnicos para trabajar con ustedes?", "acceptedAnswer": {"@type": "Answer", "text": "No. Nos encargamos de toda la parte técnica. Tú solo nos cuentas qué necesitas y cómo funciona tu negocio."}},
+        {"@type": "Question", "name": "¿Se integra con las herramientas que ya uso?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Conectamos tus sistemas actuales como CRM, hojas de cálculo, pasarelas de pago, WhatsApp y bases de datos mediante integraciones y API."}},
+        {"@type": "Question", "name": "¿Trabajan con negocios fuera de Colombia?", "acceptedAnswer": {"@type": "Answer", "text": "Sí. Trabajamos con clientes en toda Latinoamérica de forma remota, con soporte en español."}}
+      ]
+    }
+  ]
+}
+</script>
+<script>
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  // Reveal on scroll (a prueba de fallos: si algo falla, el texto se muestra igual)
+  const reveals = document.querySelectorAll('.reveal');
+  if ('IntersectionObserver' in window) {
+    const io = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('show'); io.unobserve(e.target); } });
+    }, { threshold: .08 });
+    reveals.forEach(el => io.observe(el));
+    // Respaldo: asegurar que todo sea visible tras 2.5s pase lo que pase
+    setTimeout(() => reveals.forEach(el => el.classList.add('show')), 2500);
+  } else {
+    reveals.forEach(el => el.classList.add('show'));
+  }
+
+  // Mobile nav — toggle correcto
+  const burger = document.getElementById('burger');
+  const navLinks = document.querySelector('.nav-links');
+  let navOpen = false;
+  burger.addEventListener('click', () => {
+    navOpen = !navOpen;
+    navLinks.classList.toggle('open', navOpen);
+    burger.setAttribute('aria-expanded', navOpen);
+  });
+  // Cerrar al hacer clic en un enlace
+  navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    navOpen = false;
+    navLinks.classList.remove('open');
+    burger.setAttribute('aria-expanded', false);
+  }));
+  // Cerrar al hacer clic fuera
+  document.addEventListener('click', e => {
+    if (navOpen && !burger.contains(e.target) && !navLinks.contains(e.target)) {
+      navOpen = false;
+      navLinks.classList.remove('open');
+    }
+  });
+</script>
+</body>
+</html>

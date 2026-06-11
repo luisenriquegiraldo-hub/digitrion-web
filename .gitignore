@@ -1,0 +1,11 @@
+# Notas internas de trabajo (no forman parte del sitio)
+NOTAS-SESION.md
+
+# Archivos del sistema operativo
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# Editores
+.vscode/
+.idea/

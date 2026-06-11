@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# No indexar páginas legales (no aportan al SEO principal)
+Disallow: /privacidad
+Disallow: /terminos
+
+Sitemap: https://digitrion.com/sitemap.xml
