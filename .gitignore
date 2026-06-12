@@ -1,6 +1,13 @@
 # Notas internas de trabajo (no forman parte del sitio)
 NOTAS-SESION.md
 
+# Versiones candidatas de la og-image (solo og-image.jpg es la oficial)
+og-image-v*.jpg
+
+# Archivos fuente de la og-image (no se despliegan; solo og-image.jpg)
+fondo*.png
+logo-d.png
+
 # Archivos del sistema operativo
 Thumbs.db
 desktop.ini
