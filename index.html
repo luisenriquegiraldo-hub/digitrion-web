@@ -116,8 +116,6 @@
   .btn-ghost{background:transparent;color:var(--text);border:1px solid var(--border-strong)}
   .btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
   .nav-cta{display:flex;gap:12px;align-items:center}
-  /* Botón "Iniciar sesión" del nav: más sutil */
-  .nav-cta .btn-ghost{color:var(--muted);border-color:var(--border)}
   .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:8px}
   .burger span{width:24px;height:2px;background:var(--text);border-radius:2px}
 
@@ -157,7 +155,7 @@
   .bub:nth-child(4){animation-delay:2.5s}
   .bub:nth-child(5){animation-delay:3.3s}
   @keyframes rise{to{opacity:1;transform:translateY(0)}}
-  .float-tag{position:absolute;background:var(--surface);border:1px solid var(--border-strong);border-radius:12px;padding:10px 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+  .float-tag{position:absolute;z-index:3;background:var(--surface);border:1px solid var(--border-strong);border-radius:12px;padding:10px 14px;font-size:13px;font-weight:600;display:flex;align-items:center;gap:8px;box-shadow:0 12px 30px rgba(0,0,0,.4)}
   .float-tag .ic{color:var(--accent)}
   .ft-1{top:6%;left:-6%;animation:bob 4s ease-in-out infinite}
   .ft-2{bottom:10%;right:-8%;animation:bob 4s ease-in-out infinite .8s}
@@ -228,6 +226,21 @@
   .reveal{opacity:0;transform:translateY(24px);transition:opacity .7s ease,transform .7s ease}
   .reveal.show{opacity:1;transform:none}
 
+  /* WhatsApp flotante — siempre visible, en cualquier tamaño de pantalla */
+  .whatsapp-float{
+    position:fixed;bottom:22px;right:22px;z-index:80;
+    width:58px;height:58px;border-radius:50%;
+    background:#25D366;display:flex;align-items:center;justify-content:center;
+    box-shadow:0 10px 26px rgba(0,0,0,.4);
+    transition:transform .25s;
+  }
+  .whatsapp-float:hover{transform:scale(1.08)}
+  .whatsapp-float svg{width:30px;height:30px;fill:#fff}
+  @media(max-width:480px){
+    .whatsapp-float{width:52px;height:52px;bottom:16px;right:16px}
+    .whatsapp-float svg{width:27px;height:27px}
+  }
+
   /* FAQ */
   .faq{padding:80px 0}
   .faq-list{margin-top:46px;display:flex;flex-direction:column;gap:0}
@@ -250,7 +263,6 @@
     .nav-links{display:none;flex-direction:column;gap:0;position:absolute;top:72px;left:0;right:0;background:var(--bg-2);border-bottom:1px solid var(--border);z-index:100;padding:8px 0}
     .nav-links.open{display:flex}
     .nav-links a{padding:14px 24px;font-size:16px;border-bottom:1px solid var(--border)}
-    .nav-cta .btn-ghost{display:none}
     .burger{display:flex}
     .who-row{gap:20px}
     .hero h1{font-size:clamp(30px,5vw,46px)}
@@ -281,7 +293,7 @@
     .card{padding:20px}
     .faq-q{font-size:15px}
     .faq-a{font-size:15px}
-    /* En móvil pequeño: cabecera limpia (solo logo + hamburguesa) */
+    /* En móvil pequeño: cabecera limpia (solo logo + hamburguesa); el CTA de WhatsApp queda cubierto por el botón flotante */
     .nav-cta .btn-primary{display:none}
     /* Touch targets mínimo 44px */
     .btn{min-height:44px}
@@ -304,7 +316,6 @@
         <a href="#contacto">Contacto</a>
       </div>
       <div class="nav-cta">
-        <a href="#contacto" class="btn btn-ghost">Iniciar sesión</a>
         <a href="https://wa.me/573116305946?text=Hola%20Digitrion,%20quiero%20una%20demo" class="btn btn-primary" target="_blank" rel="noopener">Agenda una demo</a>
         <div class="burger" id="burger"><span></span><span></span><span></span></div>
       </div>
@@ -545,6 +556,10 @@
     </div>
   </div>
 </footer>
+
+<a href="https://wa.me/573116305946?text=Hola%20Digitrion,%20quiero%20una%20demo" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Escríbenos por WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.148.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12.004 2C6.486 2 2 6.486 2 12.004c0 1.83.492 3.593 1.42 5.153L2 22l5.007-1.396a9.96 9.96 0 004.997 1.35h.004c5.518 0 10.004-4.486 10.004-10.004C22.012 6.432 17.526 2 12.004 2zm0 18.156a8.13 8.13 0 01-4.153-1.14l-.298-.177-3.096.862.83-3.036-.194-.312a8.145 8.145 0 01-1.257-4.35c0-4.508 3.667-8.174 8.174-8.174 4.508 0 8.173 3.666 8.173 8.174 0 4.508-3.665 8.153-8.179 8.153z"/></svg>
+</a>
 
 <script type="application/ld+json">
 {

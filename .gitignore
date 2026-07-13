@@ -1,6 +1,9 @@
 # Notas internas de trabajo (no forman parte del sitio)
 NOTAS-SESION.md
 
+# Backups locales de páginas (no se despliegan)
+index.backup-*.html
+
 # Versiones candidatas de la og-image (solo og-image.jpg es la oficial)
 og-image-v*.jpg
 
