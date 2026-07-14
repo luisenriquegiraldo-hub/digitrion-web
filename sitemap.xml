@@ -10,18 +10,4 @@
     <xhtml:link rel="alternate" hreflang="es-CO" href="https://digitrion.com/" />
   </url>
 
-  <url>
-    <loc>https://digitrion.com/privacidad</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
-  <url>
-    <loc>https://digitrion.com/terminos</loc>
-    <lastmod>2026-06-05</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-
 </urlset>
