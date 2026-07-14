@@ -220,6 +220,8 @@
   }
   /* responsive — mobile medio */
   @media(max-width:640px){
+    /* Cabecera limpia (solo logo + hamburguesa); antes el botón de WhatsApp del header se salía de la pantalla en este rango de anchos. El CTA queda cubierto por el botón flotante. */
+    .nav-cta .btn-primary{display:none}
     .grid-3{grid-template-columns:1fr}
     .stat-grid{grid-template-columns:1fr 1fr}
     .section-pad{padding:56px 0}
@@ -243,8 +245,6 @@
     .card{padding:20px}
     .faq-q{font-size:15px}
     .faq-a{font-size:15px}
-    /* En móvil pequeño: cabecera limpia (solo logo + hamburguesa); el CTA de WhatsApp queda cubierto por el botón flotante */
-    .nav-cta .btn-primary{display:none}
     /* Touch targets mínimo 44px */
     .btn{min-height:44px}
     .nav-links a{min-height:44px;display:flex;align-items:center}
